@@ -1,0 +1,92 @@
+@import './Animation.scss';
+
+.cursor {
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim .5s infinite alternate;
+  pointer-events: none;
+  z-index: 1999;
+  position: fixed;
+  &::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid red;
+    border-radius: 50%;
+    opacity: .5;
+    top: 6px;
+    left: 6px;
+    animation: cursorAnim2 .5s infinite alternate;
+  }
+}
+
+.cursor.hovered{
+  width: 5rem;
+  height: 5rem;
+  border-width: .3rem;
+  border-color: lightgray;
+  &::after{
+    display: none;
+  }
+}
+
+.ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid rgba(31, 30, 30, 0.808);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    -webkit-transition-duration: 100ms;
+    transition-duration: 100ms;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    will-change: width, height, transform, border;
+    z-index: 999;
+    pointer-events: none;
+  }
+  
+  .dot {
+    position: fixed;
+    top: 20rem;
+    left: 20rem;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary);
+    box-shadow: 0 0 4rem rgba(0, 0, 0, .5);
+    border-radius: 100%;
+    // transform: translate(-50%, -50%);
+    transform: translate(.35rem, .35rem);
+    z-index: 999;
+    pointer-events: none;
+  }
+  
+
+  .dot.hovered{
+    display: none;
+  }
+
+  .ring.hovered {
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+    border-color: lightgray;
+  }
+  
+  .dot.hovered {
+    display: none;
+  }
+
+  
+  .expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}

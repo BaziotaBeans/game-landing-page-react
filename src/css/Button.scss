@@ -1,0 +1,31 @@
+.btn{
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+    color: var(--secondary);
+    font-size: var(--secondery-font);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    // cursor: pointer;
+    padding: 2.2rem;
+    border-radius: .4rem; 
+    
+}
+
+.price-button{
+    span{
+        &:first-child{
+            position: relative;
+            margin-right: 2rem;
+            &::before {
+                content: " ";
+                position: absolute;
+                left: calc(100% + 1rem);
+                top: -.4rem;
+                width: 0;
+                height: 2.395rem;
+                opacity: 0.5;
+                border: .0873968rem solid;
+            }
+        }
+    }
+}

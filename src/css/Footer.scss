@@ -1,0 +1,166 @@
+footer{
+    background-color: var(--secondary-dark);
+    padding: 1rem 3rem;
+    .content-1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 2rem 1rem; 
+        a {
+            width: 6rem;
+            height: 6rem;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .site-map__list{
+            display: flex;
+            align-items: center;
+            li{
+                margin: 0 1rem;
+                a{
+                    color: var(--white);
+                    font-family: var(--secondery-font);
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    position: relative;
+                    transition: var(--default-transition);
+                    &:hover{
+                        color: var(--primary);
+                        text-shadow: 0 0 1rem #000;
+                    }
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        bottom: -.2rem;
+                        width: 0%;
+                        height: .1rem;
+                        background-color: var(--primary);
+                        transition: var(--default-transition);
+                    }
+                    &:hover:not(.active-link)::before{
+                        content: "";
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .social-container{
+            // background: red;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            a{
+                font-size: 2rem;
+                color: var(--white);
+                margin: 0 1rem;
+                transition: var(--default-transition);
+                &:nth-child(1):hover {
+                    color: var(--facebook);
+                }
+                &:nth-child(2):hover {
+                    color: var(--twitter);
+                }
+                &:nth-child(3):hover {
+                    color: var(--youtube);
+                }
+                &:nth-child(4):hover {
+                    color: var(--twich);
+                }
+            }
+            
+        }
+
+    }
+
+    hr{
+        border: .01rem solid var(--grey);
+        margin: 0 2.5rem;
+    }
+
+    .content-2{ 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: var(--secondery-font);
+        margin-top: 2rem;
+        margin: 2rem 2rem;
+        padding-bottom: 2rem;
+        .copiright{
+            font-size: 1.4rem;
+            color: var(--grey-light-2);
+        }
+        
+        .author{
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            color: var(--white);
+            .love{
+                color: var(--primary);
+                margin: 0 .5rem;
+            }
+            .author-name{
+                color: var(--primary);
+                margin: 0 .5rem;
+                transition: var(--default-transition);
+                &:hover{
+                    text-shadow: 0 0 2rem var(--primary);
+                }
+            }
+
+        }
+        
+        .site-info{
+            color: var(--white);
+            font-size: 1.2rem;
+            a{
+                color: var(--white);
+                transition: var(--default-transition);
+                margin: 0 .5rem;
+                &:hover{
+                    color: var(--primary);
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 860px){
+    footer{
+        .content-1{
+            flex-direction: column;
+            gap: 4rem 0;
+        }
+        .content-2{
+            flex-direction: column;
+            gap: 3rem 0;
+            .copiright{
+                text-align: center;
+            }
+        }
+    }
+}
+@media screen and (max-width: 530px){
+    footer{
+        .content-1{
+            flex-direction: column;
+            gap: 4rem 0;
+            .site-map__list{
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                li{
+                    margin: 1rem 1rem;
+                }
+            }
+        }
+        .content-2{
+            flex-direction: column;
+            gap: 3rem 0;
+        }
+    }
+}

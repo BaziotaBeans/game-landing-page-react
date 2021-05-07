@@ -1,0 +1,154 @@
+.system-requirement-section{
+    background: radial-gradient(33.26% 45% at 64.32% 47.1%,
+     rgba(255, 255, 255, 0) 3.36%, 
+     rgba(0, 0, 0, 0) 19.22%, #080A0B 99.74%),
+     url('../images/BackgroundRequirement.png');
+     background-size: 100%;
+    // background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    padding: 10rem 10rem 3rem;
+    width: 100%;
+    height: 100%;
+
+
+    .titles{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .system-requirement-container{
+        margin: 10rem 0;
+        display: grid;
+        margin-right: 50%;
+        clip-path: polygon(100% 100%, 42% 100%, 37% 95%, 19% 95%, 15% 100%, 0 100%, 0 0, 100% 0);
+        position: relative;
+        z-index: 1;
+        grid-template-areas: 
+        'cel_1 cel_2'
+        'cel_3 cel_4'
+        'cel_5 cel_5';
+        border-radius: 1.5rem;
+        .cel-1{ grid-area: cel_1; }
+        .cel-2{ grid-area: cel_2; }
+        .cel-3{ grid-area: cel_3; }
+        .cel-4{ grid-area: cel_4; }
+        .cel-5{ grid-area: cel_5; }
+        
+        &::before{
+            content: '';
+            top: 0;
+            width: 100%;
+            height: calc(100% + 10%);
+            clip-path: polygon(100% 100%, 42% 100%, 37% 95%, 19% 95%, 15% 100%, 0 100%, 0 0, 100% 0);
+            background-color: var(--grey);
+            opacity: .1;
+            position: absolute;
+            z-index: -1;
+
+        }
+
+        .requirement-content{
+            padding: 1.5rem 1.5rem 3.5rem;
+            
+            &:nth-child(1){
+                border: .005rem solid var(--grey);
+            }
+            &:nth-child(2){
+                border-top: .005rem solid var(--grey);
+                border-right: .005rem solid var(--grey);
+                border-bottom: .005rem solid var(--grey);
+            }
+            &:nth-child(3){
+                border-right: .005rem solid var(--grey);
+                border-bottom: .005rem solid var(--grey);
+                border-left: .005rem solid var(--grey);
+            }
+            &:nth-child(4){
+                border-right: .005rem solid var(--grey);
+                border-bottom: .005rem solid var(--grey);
+            }
+            &:nth-child(5){
+                border-right: .005rem solid var(--grey);
+                border-left: .005rem solid var(--grey);
+                border-bottom: .005rem solid var(--grey);
+                position: relative;
+                
+            }
+            .system-name{
+                font-size: 2.4rem;
+                font-family: var(--primary-font);
+                font-weight: 600;
+                color: var(--primary);
+            }
+            .system-info{
+                margin-top: 1rem;
+                color: var(--white);
+                font-size: 1.8rem;
+                font-family: var(--secondery-font);
+                line-height: 1.2;
+                font-weight: 300;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 950px){
+
+    .system-requirement-section{
+        .system-requirement-container{
+            margin-right: 20%;
+        }
+    }
+}
+
+@media screen and (max-width: 730px){
+
+    .system-requirement-section{
+        padding: 8rem 8rem 3rem;
+        .system-requirement-container{
+            margin: 5rem 0;
+            margin-right: 0%;
+        }
+    }
+}
+
+@media screen and (max-width: 550px){
+
+    .system-requirement-section{
+        padding: 8rem 5rem 3rem;
+        .system-requirement-container{
+            margin-right: 0%;
+            .requirement-content{
+                .system-name{
+                    font-size: 2.3rem;
+                }
+                .system-info{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width: 450px){
+
+    .system-requirement-section{
+        padding: 8rem 2rem 3rem;
+        .system-requirement-container{
+            margin: 2rem 0;
+            margin-right: 0%;
+            .requirement-content{
+                .system-name{
+                    font-size: 1.8rem;
+                }
+                .system-info{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+}

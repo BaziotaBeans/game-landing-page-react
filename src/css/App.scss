@@ -1,0 +1,160 @@
+
+@import './reset.scss';
+
+:root{
+  --primary: #FFB548;
+  --primary-light: #FCC370;  
+  --primary-dark: #ECA946;
+  
+  --secondary: #1A1917;
+  --secondary-dark: #080A0B;
+  --white: #FFF;
+  --black: #000;
+  --grey: #333435;
+  --grey-light: #5f6061;
+  --grey-light-2: #8c8d8d;
+  --grey-dark: #1b1d1e;
+  --input-bg: #1c1e1f;
+  --input-placeholder: #8d8e8f;
+
+  --twich: #9146FF;
+  --youtube: #FF0000;
+  --twitter: #1DA1F2;
+  --facebook: #067CCA;
+
+
+  /*Font*/
+  --primary-font: 'Bebas Neue', cursive;
+  --secondery-font: 'Open Sans', sans-serif;
+  --default-transition: all .3s ease-in-out;
+
+  /*Animations*/
+  --glitch-width: 100vw;
+  --glitch-height: 100vh;
+  --gap-horizontal: 10px;
+  --gap-vertical: 5px;
+  --time-anim: 4s;
+  --delay-anim: 2s;
+  --blend-mode-1: none;
+  --blend-mode-2: none;
+  --blend-mode-3: none;
+  --blend-mode-4: none;
+  --blend-mode-5: overlay;
+  --blend-color-1: transparent;
+  --blend-color-2: transparent;
+  --blend-color-3: transparent;
+  --blend-color-4: transparent;
+  --blend-color-5: #af4949;
+
+}
+
+html{
+  //font-size: 62.5%;
+  height:100%; /* fix height to 100% for IE */
+  max-height:100%; /* fix height for other browsers */
+  /*overflow:hidden; /*get rid of scroll bars in IE */
+  overflow-x: hidden;
+}
+
+html, body{
+  scroll-behavior: smooth;
+  height: 100%;
+  max-height: 100%;
+  font-size: 62.5%;
+  cursor: none;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  // background: rgb(179, 177, 177);
+  background: #333;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  // background: rgb(136, 136, 136);
+  background: var(--primary);
+  border-radius: 10px;
+  border: .1rem solid #333;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  // background: rgb(100, 100, 100);
+  background: var(--primary-dark);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  // background: rgb(68, 68, 68);
+  background: black;
+  border-radius: 10px;
+}
+
+*{
+  cursor: none;
+}
+
+body{
+  background-color: var(--secondary);
+  width: 100%;
+  position: relative;
+}
+
+/*
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+
+@media (max-width: 1080px){
+  html{
+      font-size: 93.75%; // 15px ~ 16 * 0.9375
+  }
+}
+
+@media (max-width: 720px){
+  html{
+      font-size: 87.5%; // 14px 
+  }
+}*/
+
+.display-1{
+  font-size: 8rem;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  color: var(--white);
+  letter-spacing: .3rem;
+}
+
+@media screen and (max-width: 800px){
+  .display-1{
+    font-size: 5rem;
+  }
+}
+
+.display-2{
+  font-size: 2.4rem;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  color: var(--white);
+  letter-spacing: .3rem;
+}
+
+.m-auto{
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1088px){
+  .m-auto{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+}

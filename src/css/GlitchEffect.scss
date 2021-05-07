@@ -1,0 +1,36 @@
+@import './Animation.scss';
+
+.glitch{
+    position: relative;
+    width: 100%;
+    &::before, ::after{
+        color: var(--white);
+        content: attr(data-content);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: black;
+        top: 0;
+    }
+
+    &::before{
+        left: 3px;
+        text-shadow: -2px 0 red;
+        animation-name: glitch-animation-1;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: reverse-alternate;
+    }
+    &::after {
+        left: -3px;
+        text-shadow: -2px 0 blue;
+        animation-name: glitch-animation-2;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: reverse-alternate;
+    }
+}

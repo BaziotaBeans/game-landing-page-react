@@ -1,0 +1,42 @@
+.scrollDown{
+    z-index: 1;
+    a{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-family: var(--secondery-font);
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var(--white);
+        margin-bottom: 0rem;
+        padding-bottom: 5rem;
+        transform: scale(.9);
+        
+        transition: var(--default-transition);
+        &:hover{
+            transform: scale(1);
+            color: var(--secondary);
+            text-shadow: 0 0 1rem var(--primary), 
+                        0 0 1rem var(--primary), 
+                        0 0 1rem var(--primary),
+                        0 0 1rem var(--primary);
+        }
+
+        .story{
+        }
+        .btn-arrow-down{
+            font-size: 2rem;
+        }
+        
+    }
+}
+
+@keyframes bounce{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}

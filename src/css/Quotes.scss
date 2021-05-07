@@ -1,0 +1,84 @@
+.quotes-section{
+    background: radial-gradient(70.52% 37.27% at 24.21% 47.47%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 51.1%, #080A0B 99.74%), url('../images/BackgroundQuotes.png');
+    //background: url('../images/BackgroundHero-1.png');
+    background-size: cover;
+    //    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    padding: 5rem 10rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__left{
+        .text{
+            font-size: 1.8rem;
+            font-family: var(--secondery-font);
+            color: var(--white);
+            text-align: justify;
+            width: 43.495rem;
+            margin: 4rem 0;
+            p{
+                line-height: 1.2;
+                font-weight: 300;
+            }
+        }
+        button{
+            transition: var(--default-transition);
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 1086px){
+    .quotes-section{}
+}
+
+@media screen and (max-width: 963px){
+    .quotes-section{
+        grid-template-columns: auto;
+
+        &__right{
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+    .quotes-section{
+        padding: 5rem 5rem;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .quotes-section{
+        padding: 5rem 3rem;
+        &__left{
+            .text{
+                font-size: 1.8rem;
+                font-family: var(--secondery-font);
+                color: var(--white);
+                text-align: justify;
+                width: 100%;
+                margin: 4rem 0;
+                p{
+                    line-height: 1.2;
+                    font-weight: 300;
+                }
+            }
+            button{
+                transition: var(--default-transition);
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
