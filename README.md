@@ -16,6 +16,7 @@ Me hahaha...
 This is a landingpage based on UI Concept Game
 ## :flower_playing_cards: Layout
 ![image](https://user-images.githubusercontent.com/48324076/117391524-008fc580-aee8-11eb-9c75-fd0aeb54faee.png)
+## Se in [action](https://blissful-newton-199855.netlify.app/)
 
 ## :computer: Technologies 
 - [React](https://reactjs.org/)
